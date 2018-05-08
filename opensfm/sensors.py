@@ -3,7 +3,7 @@ import json
 from opensfm import context
 
 with open(context.SENSOR, 'rb') as f:
-    sensor_data = json.loads(f.read())
+    sensor_data = json.loads(f.read().decode("utf8"))
 
 # Convert model types to lower cases for easier query
 keys = [k.lower() for k in sensor_data.keys()]
